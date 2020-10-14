@@ -1,0 +1,36 @@
+<!--/views/index.phtml-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <?php echo $this->tag->getTitle(); ?>
+        <?php $this->partial("partials/styles"); ?>
+		<?php $this->partial("partials/scripts"); ?>
+        <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+        <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    </head> 
+    <body role="document" class="">
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <div id="logo_organization">
+                    <div class="logo">
+                        <a href="/"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-container container-fluid">
+            <?php echo $this->flashSession->output(); ?>
+            <?php echo $this->getContent(); ?>
+        </div>
+        
+        <div id="footer">
+            <div class="container">
+                Gifted Custom Art &copy; <?=date("Y"); ?>
+            </div>
+        </div>
+    </body>
+</html>

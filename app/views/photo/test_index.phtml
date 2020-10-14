@@ -1,0 +1,14 @@
+<?php echo $this->getContent(); ?>
+
+<form action="photo/uploadimage" method="post" enctype="multipart/form-data">
+    Select image to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Image" name="submit">
+</form>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        console.log("photo ready");
+        gca.photo.initialize();
+    });
+</script>

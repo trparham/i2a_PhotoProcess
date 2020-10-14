@@ -1,0 +1,374 @@
+@CHARSET "ISO-8859-1";
+
+/***************************************
+    Framework
+***************************************/
+html{
+    position: relative;
+    min-height: 100%;
+}
+body {
+    padding-top: 115px;
+    margin-bottom: 45px;
+}
+body.embedded .hidden-embedded {
+    display:none;
+}
+
+@media print {
+	body {
+		padding-top: 0px;
+		margin-bottom: 0px;
+	}
+	.navbar  {display:none}
+	#footer  {display:none}
+}
+body.calendar .navbar-nav > li.calendar > a,
+body.event .navbar-nav > li.events > a,
+body.category .navbar-nav > li.categories > a,
+body.organization .navbar-nav > li.organization > a,
+body.user .navbar-nav > li.user > a,
+body.userprofile .navbar-nav > li.user > a,
+body.admin .navbar-nav > li.admin > a,
+body.adminorganization .navbar-nav > li.admin > a,
+body.adminuser .navbar-nav > li.admin > a,
+body.admintheme .navbar-nav > li.admin > a {
+    color: #00688B;
+    background-color: #cccccc;
+}
+
+input:-ms-input-placeholder {
+    color: #C0C0C0;
+  }
+  
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+h1 {margin: 0 0 15px 0}
+
+ul {padding-left: 20px;}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+button:focus {outline:0;}
+a:focus {outline:0;}
+
+/***************************************************
+ Header and Navigation
+***************************************************/
+#logo_organization {
+	display: table;
+}
+#logo_organization .logo,
+#logo_organization .organization {
+	height: 100%;
+	vertical-align: top;
+}
+#logo_organization .logo {
+	position: absolute;
+	width: 178px;
+	height: 100px;
+	background: url("/images/logo1.jpg") no-repeat scroll center  transparent;
+}
+#logo_organization .logo a {
+	position: absolute;
+	width: 130px;
+	height: 95px;
+}
+
+#logo_organization .organization {
+	margin-left: 130px;
+	height: 45px;
+}
+
+#logo_organization .organization h1 {
+	margin-top: 15px;
+	font-size: 2em;
+}
+.navbar-inverse {
+	background-color: #0a0c09;
+	border-color: #080808;
+	color: #ffffff;
+        height: 100px;
+}
+.navbar-header{
+    width: 100%;
+}
+.navbar-right{
+    margin-right: 15px;
+}
+/*.navbar-collapse.collapse{
+    margin-top: -30px;
+}*/
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 30px;
+  color: white;
+  background-color: #0a0c09;
+  text-align: center;
+}
+@media ( max-width : 780px) {
+	.navbar-nav>li>a {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+@media ( min-width : 768px) {
+	.navbar-nav {
+		margin-left: 130px;
+	}
+	.navbar-nav>li>a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+@media ( max-width : 767px) {
+	body {
+		padding-top: 100px;
+	}
+	#logo_organization .organization {
+		height: 75px;
+	}
+}
+@media ( max-width : 500px) {
+	#logo_organization .organization h1 {
+		font-size: 1.3em;
+		text-overflow:ellipsis;
+	}
+}
+
+/***************************************************
+  General, shared styles not scoped to specific 
+  section and affect the entire site.
+***************************************************/
+input[type="text"] {
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+article h2,
+fieldset legend {
+	font-size:18px;
+	font-weight:normal;
+	border-radius:3px 3px 0 0;
+	padding:3px 5px;
+	color:#392061;
+/*	border:1px solid #cfcfcf;*/
+	margin: 0;
+	vertical-align: baseline;
+}
+fieldset {
+	margin-bottom: 15px;
+}
+fieldset legend {
+	float:left;
+	margin-bottom: 15px;
+}
+fieldset label {
+	display: inline-block;
+}
+label.error {
+	font-size: .8em;
+	color: #c00;
+}
+
+.starthidden { 
+	display:none;
+}
+.no-wrap {
+	white-space: nowrap;
+}
+.marginTB{
+	margin-top:15px;
+	margin-bottom:15px;	
+}
+.marginT{
+	margin-top:15px;
+}
+.marginB{
+	margin-bottom:15px;	
+}
+.margintTB{
+	margin-top:10px;
+	margin-bottom:20px;	
+}
+.no-margin {
+	margin: 0;
+}
+.mw-150 {
+	min-width: 150px;
+}
+
+/***************************************************
+ owl notifications
+***************************************************/
+.alert-error {
+	color: red;
+	font-size: 14pt;
+}
+.dialog {
+	display:none;
+	text-align: center;
+}
+.icon {
+	cursor: pointer;
+}
+
+
+.dataTables_length {
+	padding-top: 5px;
+}
+.dataTables_filter {
+	padding-top: 5px;
+}
+
+.place_required::-webkit-input-placeholder {
+    color: red;
+    opacity: .5;
+}
+.btn.btn-icon .glyphicon{
+    margin-right: 0;
+}
+.icon-glyph {
+    font-size: 3em;
+}
+.btn .glyphicon {
+    margin-right: 1px;
+/*    vertical-align: middle; */
+}
+.btn.btn-icon .glyphicon {
+    margin-right: 0;
+}
+
+a.glyphicon:hover, a.glyphicon:focus {
+    text-decoration: none;
+}
+
+.left {
+	float: left !important;
+}
+
+.right {
+	float: right !important;
+}
+
+.clear {
+    clear: both !important;
+}
+
+.green {
+    color: green;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.num {
+    text-align: right;
+}
+
+.normalLabel {
+	font-weight:normal;
+        width: 150px;
+}
+
+button{
+	font-size:12px;
+	color:#222;
+	border-radius:4px;
+	border:1px solid #e5ba52;
+	padding:5px 15px;
+	cursor:pointer;
+	text-shadow:0 1px 1px rgba(255, 255, 255, 0.5);
+	background: #ffd659; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffd659 1%, #f8b958 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#ffd659), color-stop(100%,#f8b958)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffd659 1%,#f8b958 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffd659 1%,#f8b958 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffd659 1%,#f8b958 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ffd659 1%,#f8b958 100%);	
+}
+/***************************************************
+ Bootstrap Tweaks
+***************************************************/
+/*--btn-group padding and alignment--*/
+.btn-group {
+    padding: 15px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+/***************************************************
+Photo Processing
+***************************************************/
+.image-preview {
+    #width: 900px;
+    #height: 700px;
+    background: #C0C0C0;
+}
+img {
+     display: block;
+/*     position: relative;*/
+/*     top: 50%;*/
+/*     transform: translateY(-50%);*/
+     margin: auto;
+}
+p.help-block {
+    #width: 100px;
+}
+.image-holder {
+    width:350px;
+    height: 500px;
+    margin-top: 40px;
+    border: 1px solid #C0C0C0;
+}
+.manip-btns {
+	margin-top: 20px;
+	margin-left: 200px;
+
+}
+.original {
+    width: 300px;
+    height: 500px;
+}
+.loader {
+	height: 75px;
+}
+.number-val, .detail-val {
+    width: 30px;
+    text-align: center;
+}
+.adj-label {
+    margin: 10px 0 10px 0;
+}
+.adj-btn {
+    margin: 9px 0 9px 0;
+}
+.instructions {
+    font-size: 83%;
+}
+
+.fileinput-button {
+	margin-left: 15px;
+	margin-top: 5px;
+}

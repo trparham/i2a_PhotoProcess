@@ -1,0 +1,127 @@
+<?php echo $this->getContent(); ?>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Photo Processing Demo</h2>
+    </div>
+</div>
+<div class="col-md-12">
+	<div class="col-sm-3">
+		<form id="imageEdit" method="post" class="validate form-horizontal"> <!--action="/image/uploadimage/save"-->
+			<fieldset>
+				<legend>Upload Image</legend>
+				<div class="row">
+					<div class="col-md-12">
+						<label class="control-label pull-left" style="">Choose an image to upload:</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="btn btn-default fileinput-button">
+						<i class="glyphicon glyphicon-plus"></i> <span>Upload Image</span>
+						<input id="fileupload" type="file" name="files[]" multiple>
+					</div>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Color Options</legend>
+				<div class="row">
+					<div class="col-md-12">
+						<label class="adj-label">Color Palette:</label><br/>
+						<label for="color1" class="radio-inline"><input id="color1" name="colorPalette" type="radio" value="rose" />Rose </label>
+						<label for="color2" class="radio-inline"><input id="color2" name="colorPalette" type="radio" value="purple" />Purple </label>	
+						<label for="color3" class="radio-inline"><input id="color3" name="colorPalette" type="radio" value="green" />Green </label><br/>
+						<label for="color4" class="radio-inline"><input id="color4" name="colorPalette" type="radio" value="black" />Black </label>
+						<label for="color5" class="radio-inline"><input id="color5" name="colorPalette" type="radio" value="blue" />Blue </label>
+						<label for="color6" class="radio-inline"><input id="color6" name="colorPalette" type="radio" value="brown" />Brown </label>
+					</div>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Process Image</legend>
+				<div class="row">
+					<div class="btn btn-default fileinput-button" id="processButton">
+						<i class="glyphicon glyphicon-play-circle"></i><span>Process Image</span>
+					</div>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Finalize Image</legend>
+				<div class="row">
+					<div class="col-md-3">
+						<label>File Name:</label>
+					</div>
+					<div class="col-md-9">
+						<input type="text" name="finalFileName" id="finalFileName" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<label>Microsite:</label>
+					</div>
+					<div class="col-md-9">
+						<input type="text" name="microsite" id="microsite" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<label>Venue:</label>
+					</div>
+					<div class="col-md-9">
+						<input type="text" name="venue" id="venue" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<label>Date/Time:</label>
+					</div>
+					<div class="col-md-9">
+						<input type="text" name="eventTime" id="eventTime" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="btn btn-default fileinput-button" id="finalButton">
+						<i class="glyphicon glyphicon-play-circle"></i><span>Finalize Image</span>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<div class="col-sm-9">
+		<div class="row">
+<!-- 			<div class="col-sm-5" > -->
+<!-- 				<div class="form-group"> -->
+					<div class="col-sm-6">
+						<div class="image-preview" id="prevOriginal">
+							<img src="/uploads/default.png" alt="image" />
+							<p class="help-block">Image Preview</p>
+							<input type="hidden" id="originalImage" name="originalImage">
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="image-preview" id="prevNumbered">
+							<img src="/uploads/default.png" alt="image" />
+							<p class="help-block">Image Preview</p>
+							<input type="hidden" id="numberedImage" name="numberedImage">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="image-preview" id="prevReference">
+							<img src="/uploads/default.png" alt="image" />
+							<p class="help-block">Image Preview</p>
+							<input type="hidden" id="referenceImage" name="referenceImage">
+						</div>
+					</div>
+<!-- 				</div> -->
+<!-- 			</div> -->
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        console.log("photo ready");
+        gca.photo.initialize();
+    });
+</script>

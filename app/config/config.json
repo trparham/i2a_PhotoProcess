@@ -1,0 +1,41 @@
+{
+	"database": {
+		"host": "",
+		"username": "",
+		"password": "",
+		"name": ""
+	},
+	"mail": {
+	},
+	"application": {
+		"controllersDir": "/../app/controllers/",
+		"modelsDir": "/../app/models/",
+		"viewsDir": "/../app/views/",
+		"pluginsDir": "/../app/plugins/",
+		"serviceDir": "/../app/service/",
+		"libraryDir": "/../app/library/",
+		"baseUri": "",
+		"publicUrl": "http://images2art.com",
+		"ImageMagick": "convert ",
+		"basePath": "/var/www/vhosts/images2art.com/photoprocess/public",
+		"originalPath": "/uploads/original/",
+		"resizePath": "/uploads/resize/",
+		"grayscalePath": "/uploads/grayscale/",
+		"posterizePath": "/uploads/posterize/",
+		"tracePath": "/uploads/trace/",
+		"transparentPath": "/uploads/transparent/",
+		"numberPath": "/uploads/number/",
+		"traceNumberPath": "/uploads/tracenumber/",
+		"previewPath": "/uploads/preview/",
+		"finalPath": "/uploads/final/",
+		"imagePath": "/images/"
+	},
+	"constants": {
+		"timezone": "EST"
+	},
+    "drive": {
+        "credentialsPath": "/../../creds/i2a-service-account.json",
+        "user": "kevin@images2art.com",
+        "folder": "1d_cf9fa5Jm3xwu5yueni9acp21k-DvLS"
+    }
+}
